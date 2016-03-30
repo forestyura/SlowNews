@@ -11,12 +11,14 @@
     <div class="content">
        <c:forEach items="${News}" var="news">
             <div class="news">
-                <h1>${news.name}</h1>
-                <img src="${news.image}">
-                <p>
+                <form name="news" method="post">
+                <h1 name="name">${news.name}</h1>
+                <img name="img" src="${news.image}">
+                <p name="data">
                     ${news.data}
                 </p>
                 <button>Add to archive</button>
+                </form>
                 <hr>
             </div>
         </c:forEach>
