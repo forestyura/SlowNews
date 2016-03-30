@@ -8,13 +8,14 @@
 <body>
 <div class="page">
     <%@include file="Header.jsp"%>
+
+
     <div class="content">
         <div class="login">
             <h1>Sign in</h1>
-            <form action="sign-in" method="put">
+            <form name="login" method="post">
             Username
             <input type="text" name="username">
-
             Password
             <input type="password" name="password">
             <p><button >Log in</button></p>

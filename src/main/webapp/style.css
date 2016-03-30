@@ -181,3 +181,22 @@ a:link{
     position: relative;
     padding: 10px 20px 38px 20px;
 }
+
+.hello-message{
+    float: right;
+    display: block;
+    margin: 5px;
+    margin-right: 10px;
+}
+
+.logout-form{
+    display: inline;
+}
+
+.logout-button{
+    color: #000000;
+    background: #EFEADA;
+    padding: 3px;
+    outline: none;
+    width: 100px;
+}

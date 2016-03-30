@@ -10,7 +10,7 @@
     <%@include file="Header.jsp"%>
     <div class="content">
         <div class="registration">
-            <h1>Registration</h1>
+            <h1>Sign up</h1>
             <form action="registration" method="post">
             Username
             <input type="text" name="username">
