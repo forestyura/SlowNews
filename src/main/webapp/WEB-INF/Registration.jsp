@@ -11,7 +11,7 @@
     <div class="content">
         <div class="registration">
             <h1>Registration</h1>
-            <form action="registration" method="put">
+            <form action="registration" method="post">
             Username
             <input type="text" name="username">
             <br>
