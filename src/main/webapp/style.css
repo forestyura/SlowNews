@@ -1,0 +1,183 @@
+body {
+    background-color: #C8C5BA;
+    margin: 0;
+    font-family: 'Times New Roman', Georgia, Times, sans serif;
+}
+
+p{
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #000000;
+}
+
+a:hover{
+    color: #708090;
+}
+
+a:link{
+    color: #000000;
+}
+
+
+.page{
+    margin: 0 auto;
+    width: 60%;
+    background-color: #FFFEFC;
+    min-height: 95%;
+}
+
+.header{
+    background-color: #EFEADA;
+    height: 100px;
+}
+
+.content{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.news{
+    padding: 5px;
+    height: auto;
+    min-height: 250px;
+    width: auto;
+}
+
+.news img{
+    height: 150px;
+    float: left;
+    margin: 10px;
+}
+
+.news p{
+    padding: 10px;
+}
+
+.news hr {
+    margin-top: 70px;
+}
+
+.news button {
+    color: #000000;
+    background: #EFEADA;
+    padding: 5px;
+    float: right;
+    margin-top: 10px;
+}
+
+.news button:hover {
+    background: #708090;
+}
+
+.news button:active {
+    background: grey;
+}
+
+.login {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #C8C5BA;
+}
+
+.login button{
+    color: #000000;
+    background: #EFEADA;
+    padding: 5px;
+    outline: none;
+    width: 100px;
+}
+
+.login button:hover {
+    background: #708090;
+}
+.login button:active {
+    background: grey;
+}
+
+.login input{
+    height: 30px;
+    margin: 10px;
+    width: 250px;
+}
+
+.registration {
+    width: 300px;
+    height: 450px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #C8C5BA;
+}
+
+.registration button{
+    color: #000000;
+    background: #EFEADA;
+    padding: 5px;
+    outline: none;
+    width: 100px;
+}
+
+.registration button:hover {
+    background: #708090;
+}
+.registration button:active {
+    background: grey;
+}
+
+.registration input{
+    height: 30px;
+    margin: 10px;
+    width: 250px;
+}
+
+
+.footer{
+    background-color: #708090;
+    text-align: center;
+    bottom: 0;
+    width: 60%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12pt;
+    margin: 0 auto;
+}
+
+.title {
+    float: left;
+    font-size: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px;
+}
+
+.title a:hover{
+    color: #C8C5BA;
+}
+
+.site-navigation {
+    padding: 36px 0;
+    float: right;
+}
+
+.site-navigation li {
+    position: relative;
+    float: left;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.site-navigation li a {
+    position: relative;
+    padding: 10px 20px 38px 20px;
+}
