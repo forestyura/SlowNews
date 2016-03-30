@@ -10,13 +10,15 @@
     <%@include file="Header.jsp"%>
     <div class="content">
         <div class="login">
-            <h1>Log in</h1>
+            <h1>Sign in</h1>
+            <form action="sign-in" method="put">
             Username
-            <input id="username" type="text">
+            <input type="text" name="username">
 
             Password
-            <input id="password" type="password" >
-            <p><button>Log in</button></p>
+            <input type="password" name="password">
+            <p><button >Log in</button></p>
+            </form>
         </div>
     </div>
 </div>

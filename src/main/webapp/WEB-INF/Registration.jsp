@@ -11,18 +11,20 @@
     <div class="content">
         <div class="registration">
             <h1>Registration</h1>
+            <form action="registration" method="put">
             Username
-            <input id="username" type="text">
+            <input type="text" name="username">
             <br>
             E-mail
-            <input id="e-mail" type="text">
+            <input type="text" name="e-mail">
             <br>
             Password
-            <input id="password" type="password" >
+            <input type="text"name="password">
             Confirm password
-            <input id="confirm-password" type="password" >
+            <input type="text" name="confirm-password">
 
             <p><button>Accept</button></p>
+            </form>
         </div>
     </div>
 </div>
