@@ -1,6 +1,7 @@
 package com.forest.slownews.controller;
 
 import com.forest.slownews.model.UsersList;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,7 +23,10 @@ public class RegistrationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getRequestURI().contains("registration")) {
             if (req.getParameter("password").equals(req.getParameter("confirm-password"))) {
-                UsersList.getInstance().addUser(req.getParameter("username"), req.getParameter("e-mail"), req.getParameter("password"));
+                UsersList.getInstance().addUser(
+                        req.getParameter("username"),
+                        req.getParameter("e-mail"),
+                        DigestUtils.sha512Hex(req.getParameter("password")));
                 resp.sendRedirect("/registration");
             }
         }
