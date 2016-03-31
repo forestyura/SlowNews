@@ -1,6 +1,6 @@
 package com.forest.slownews.controller;
 
-import com.forest.slownews.model.UsersList;
+import com.forest.slownews.model.ArchiveNewsList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ public class ArchiveServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            req.setAttribute("ArchiveNews", UsersList.getInstance().getArchiveNews(req.getSession().getAttribute("LoginUsers").toString()));
+            req.setAttribute("ArchiveNews", ArchiveNewsList.getInstance().getArchiveNews(req.getSession().getAttribute("LoginUsers").toString()));
         }
         catch (NullPointerException ex) {
             System.out.println(ex);
