@@ -16,7 +16,7 @@ import java.io.IOException;
 public class NewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("News", new InitNews().getNews());
+        req.setAttribute("News", new InitNews(getServletContext().getRealPath("/WEB-INF/classes/words.txt")).getNews());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/News.jsp");
         dispatcher.forward(req,resp);
         resp.setContentLengthLong(10000);

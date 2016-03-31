@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class InitNews {
     private ArrayList<News> news;
-    private static String FILE_NAME = "src/main/resources/words.txt";
+    private String fileName;
 
     public ArrayList<News> getNews() {
         news = new ArrayList<>();
@@ -19,11 +19,15 @@ public class InitNews {
         return news;
     }
 
+    public InitNews(String fileName) {
+        this.fileName = fileName;
+    }
+
     private String generateName() {
         String name = "";
         int nameLenght = new Random().nextInt(5) + 2;
         for(int i=0; i<nameLenght; i++) {
-            name = getWordFromFile() + " ";
+            name = name + " " + getWordFromFile();
         }
         return name;
     }
@@ -32,7 +36,7 @@ public class InitNews {
         String text = "";
         int textLenght = new Random().nextInt(500) + 50;
         for(int i=0; i<textLenght; i++) {
-            text = getWordFromFile() + " ";
+            text = text + " " + getWordFromFile();
         }
         return text;
     }
@@ -40,8 +44,9 @@ public class InitNews {
     private String getWordFromFile() {
         String word ="";
         try {
-            RandomAccessFile randomAccessFile = new RandomAccessFile(new File(FILE_NAME), "r");
-            randomAccessFile.seek(new Random().nextInt(9995));
+            RandomAccessFile randomAccessFile = new RandomAccessFile(new File(fileName), "r");
+            randomAccessFile.seek(new Random().nextInt(1000));
+            randomAccessFile.readLine();
             word = randomAccessFile.readLine();
         }
         catch (FileNotFoundException ex) {
