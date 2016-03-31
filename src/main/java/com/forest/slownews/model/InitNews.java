@@ -14,7 +14,7 @@ public class InitNews {
     public ArrayList<News> getNews() {
         news = new ArrayList<>();
         for(int i=0; i<5; i++) {
-            news.add(new News(generateName(), generateText(), ""));
+            news.add(new News(generateName(), generateText(), getRandomImage()));
         }
         return news;
     }
@@ -57,5 +57,9 @@ public class InitNews {
         }
 
         return word;
+    }
+
+    private String getRandomImage() {
+        return ("/image/news" + (new Random().nextInt(9) + 1) + ".jpg");
     }
 }
