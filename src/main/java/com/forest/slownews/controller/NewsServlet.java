@@ -29,7 +29,6 @@ public class NewsServlet extends HttpServlet {
                         req.getSession().getAttribute("LoginUsers").toString(),
                         new News(req.getParameter("name"), req.getParameter("data"), req.getParameter("image")));
             }
-        System.out.println(req.getParameter("name") + req.getParameter("data") + req.getParameter("image"));
         resp.sendRedirect("/");
     }
 }
