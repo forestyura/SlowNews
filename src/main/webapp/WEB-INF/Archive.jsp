@@ -16,7 +16,6 @@
                 <p>
                         ${news.data}
                 </p>
-                <button>Add to archive</button>
                 <hr>
             </div>
         </c:forEach>

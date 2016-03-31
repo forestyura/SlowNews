@@ -17,12 +17,14 @@
                 <p>
                     ${news.data}
                 </p>
-                <form name="news" method="post">
-                    <input type="hidden" name="name" value="${news.name}">
-                    <input type="hidden" name="data" value="${news.data}">
-                    <input type="hidden" name="image" value="${news.image}">
-                <button>Add to archive</button>
-                </form>
+                <c:if test="${LoginUsers!=null}">
+                    <form name="news" method="post">
+                        <input type="hidden" name="name" value="${news.name}">
+                        <input type="hidden" name="data" value="${news.data}">
+                        <input type="hidden" name="image" value="${news.image}">
+                    <button>Add to archive</button>
+                    </form>
+                </c:if>
                 <hr>
             </div>
         </c:forEach>

@@ -3,9 +3,13 @@
     <div class="title"><a href="/" title="SlowNews" rel="home">SlowNews</a></div>
     <nav class="site-navigation">
         <li><a href="/news">News</a></li>
-        <li><a href="/archive">Archive</a></li>
+        <c:if test="${LoginUsers!=null}">
+            <li><a href="/archive">Archive</a></li>
+        </c:if>
         <li><a href="/login">Login</a></li>
-        <li><a href="/registration">Registration</a></li>
+        <c:if test="${LoginUsers==null}">
+            <li><a href="/registration">Registration</a></li>
+        </c:if>
     </nav>
 </div>
 
