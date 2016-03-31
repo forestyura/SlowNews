@@ -2,6 +2,7 @@ package com.forest.slownews.controller;
 
 import com.forest.slownews.model.User;
 import com.forest.slownews.model.UsersList;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,7 +24,7 @@ public class LogInServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getRequestURI().contains("login")) {
             for (User user : UsersList.getInstance().getUserList()) {
-                if (req.getParameter("username").equals(user.getUsername()) && req.getParameter("password").equals(user.getPassword())) {
+                if (req.getParameter("username").equals(user.getUsername()) && DigestUtils.sha512Hex(req.getParameter("password")).equals(user.getPassword())) {
                     req.getSession().setAttribute("LoginUsers", user.getUsername());
                 }
             }
