@@ -1,4 +1,6 @@
-package com.forest.slownews.model;
+package com.forest.slownews.controller;
+
+import com.forest.slownews.model.News;
 
 import java.io.File;
 import java.io.FileNotFoundException;

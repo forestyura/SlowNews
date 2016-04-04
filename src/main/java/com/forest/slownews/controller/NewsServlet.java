@@ -1,6 +1,5 @@
 package com.forest.slownews.controller;
 
-import com.forest.slownews.model.InitNews;
 import com.forest.slownews.model.News;
 import com.forest.slownews.model.ArchiveNewsList;
 

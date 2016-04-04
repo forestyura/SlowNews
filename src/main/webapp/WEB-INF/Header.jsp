@@ -14,15 +14,15 @@
 </div>
 
 <div class="hello-message">
-    Добро пожаловать,
+    Hello,
     <c:if test="${LoginUsers!=null}">
-        ${LoginUsers}
+        ${LoginUsers}!
         <form  class="logout-form" action="logout" method="post">
             <button class="logout-button">Log out</button>
         </form>
     </c:if>
 
     <c:if test="${LoginUsers==null}">
-        гость
+        guest!
     </c:if>
 </div>
