@@ -205,3 +205,8 @@ a:link{
     float: left;
     padding: 5px;
 }
+
+.news-date{
+    float: left;
+    display: block;
+}

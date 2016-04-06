@@ -12,16 +12,20 @@
        <c:forEach items="${News}" var="news">
             <div class="news">
 
-                <h1>${news.name}</h1>
+                <h1>${news.title}</h1>
                 <img src="${news.image}">
                 <p>
-                    ${news.data}
+                    ${news.description}
                 </p>
+                <div class="news-date">
+                    ${news.pubDate}
+                </div>
                 <c:if test="${LoginUsers!=null}">
                     <form name="news" method="post">
-                        <input type="hidden" name="name" value="${news.name}">
-                        <input type="hidden" name="data" value="${news.data}">
+                        <input type="hidden" name="title" value="${news.title}">
+                        <input type="hidden" name="description" value="${news.description}">
                         <input type="hidden" name="image" value="${news.image}">
+                        <input type="hidden" name="pubDate" value="${news.pubDate}">
                     <button>Add to archive</button>
                     </form>
                 </c:if>

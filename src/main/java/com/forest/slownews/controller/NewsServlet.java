@@ -15,7 +15,7 @@ import java.io.IOException;
 public class NewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("News", new InitNews(getServletContext().getRealPath("/WEB-INF/classes/words.txt")).getNews());
+        req.setAttribute("News", new NewsProvider().readNews().getNewsList());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/News.jsp");
         dispatcher.forward(req,resp);
         resp.setContentLengthLong(10000);
@@ -26,7 +26,7 @@ public class NewsServlet extends HttpServlet {
         if(req.getSession().getAttribute("LoginUsers")!=null) {
                 ArchiveNewsList.getInstance().addArchiveNews(
                         req.getSession().getAttribute("LoginUsers").toString(),
-                        new News(req.getParameter("name"), req.getParameter("data"), req.getParameter("image")));
+                        new News(req.getParameter("title"), req.getParameter("description"), req.getParameter("pubDate")));
             }
         resp.sendRedirect("/");
     }

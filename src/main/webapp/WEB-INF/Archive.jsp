@@ -11,11 +11,14 @@
     <div class="content">
         <c:forEach items="${ArchiveNews}" var="news">
             <div class="news">
-                <h1>${news.name}</h1>
+                <h1>${news.title}</h1>
                 <img src="${news.image}">
                 <p>
-                        ${news.data}
+                        ${news.description}
                 </p>
+                <div class="news-date">
+                        ${news.pubDate}
+                </div>
                 <hr>
             </div>
         </c:forEach>
