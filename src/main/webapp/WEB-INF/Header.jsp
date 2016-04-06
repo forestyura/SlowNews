@@ -12,7 +12,9 @@
         </c:if>
     </nav>
 </div>
-
+<div class="weather-on-header">
+    ${Weather}
+</div>
 <div class="hello-message">
     Hello,
     <c:if test="${LoginUsers!=null}">

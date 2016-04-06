@@ -20,6 +20,7 @@ public class FilterForRequest implements Filter {
                 "New Request from: " + req.getRemoteAddr() +
                 ", request to: " + req.getRequestURI() +
                 ", with method: " + req.getMethod());
+        req.setAttribute("Weather", new WeatherProvider().getWeather());
         filterChain.doFilter(servletRequest, servletResponse);
     }
 

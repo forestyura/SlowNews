@@ -200,3 +200,8 @@ a:link{
     outline: none;
     width: 100px;
 }
+
+.weather-on-header{
+    float: left;
+    padding: 5px;
+}
