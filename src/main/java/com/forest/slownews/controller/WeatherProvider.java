@@ -8,11 +8,11 @@ import javax.ws.rs.client.WebTarget;
 
 public class WeatherProvider {
     public String getWeather() {
-        return "Weather in Kiev " + readJson(restRequest());
+        return "Weather in Kiev " + readJson(restRequest()) + " C";
     }
 
-    public Double readJson(String json) {
-        return new JSONObject(json).getJSONObject("currently").getDouble("temperature");
+    public int readJson(String json) {
+        return (int)new JSONObject(json).getJSONObject("currently").getDouble("temperature");
     }
 
     public String restRequest() {
