@@ -18,8 +18,10 @@ $(function(){
     }, 10000)
 
     $("nav.site-navigation").click(function (event) {
-        console.log(event.target.textContent);
-        history.pushState({foo: 'bar'}, 'event.target.textContent', '/' + event.target.textContent);
+        history.replaceState({foo: 'bar'}, event.target.textContent + " Page", '/' + event.target.textContent.toLowerCase());
+        document.getElementById("page-title").innerHTML = event.target.textContent + " Page";
+        $.get("/" + event.target.textContent.toLowerCase(), function(data){
+        });
         event.preventDefault();
 
     })

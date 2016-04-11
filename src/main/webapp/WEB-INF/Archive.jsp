@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Archive Page</title>
+    <title id="page-title">Archive Page</title>
     <link rel=stylesheet type="text/css" href="style.css">
 </head>
 <body>

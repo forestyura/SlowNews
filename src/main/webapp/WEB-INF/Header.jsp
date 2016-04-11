@@ -31,4 +31,3 @@ ${Weather}
     </c:if>
 </div>
 
-<audio hidden src="music.mp3"></audio>

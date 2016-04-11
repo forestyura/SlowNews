@@ -19,6 +19,7 @@ public class NewsServlet extends HttpServlet {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/News.jsp");
             dispatcher.forward(req, resp);
             resp.setContentLengthLong(10000);
+
     }
 
     @Override
