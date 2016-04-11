@@ -1,5 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="header">
+    <script src="lib/jquery-2.2.3.js"></script>
+    <script src="js/main.js"></script>
     <div class="title"><a href="/" title="SlowNews" rel="home">SlowNews</a></div>
     <nav class="site-navigation">
         <li><a href="/news">News</a></li>
@@ -12,8 +14,8 @@
         </c:if>
     </nav>
 </div>
-<div class="weather-on-header">
-    ${Weather}
+<div class="weather-on-header" id="weather" >
+${Weather}
 </div>
 <div class="hello-message">
     Hello,
@@ -28,3 +30,5 @@
         guest!
     </c:if>
 </div>
+
+<audio hidden src="music.mp3"></audio>

@@ -15,10 +15,10 @@ import java.io.IOException;
 public class NewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("News", new NewsProvider().readNews().getNewsList());
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/News.jsp");
-        dispatcher.forward(req,resp);
-        resp.setContentLengthLong(10000);
+            req.setAttribute("News", new NewsProvider().readNews().getNewsList());
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/News.jsp");
+            dispatcher.forward(req, resp);
+            resp.setContentLengthLong(10000);
     }
 
     @Override
@@ -30,4 +30,5 @@ public class NewsServlet extends HttpServlet {
             }
         resp.sendRedirect("/");
     }
+
 }

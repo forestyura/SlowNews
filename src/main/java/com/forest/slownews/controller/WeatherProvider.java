@@ -7,8 +7,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 
 public class WeatherProvider {
-    public String getWeather() {
-        return "Weather in Kiev " + readJson(restRequest()) + " C";
+    public String getWeather() {return "Weather in Kiev " + readJson(restRequest()) + " C";
     }
 
     public int readJson(String json) {

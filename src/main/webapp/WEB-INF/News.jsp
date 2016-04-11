@@ -4,6 +4,7 @@
 <head>
     <title>News Page</title>
     <link rel=stylesheet type="text/css" href="style.css">
+
 </head>
 <body>
 <div class="page">
@@ -26,7 +27,7 @@
                         <input type="hidden" name="description" value="${news.description}">
                         <input type="hidden" name="image" value="${news.image}">
                         <input type="hidden" name="pubDate" value="${news.pubDate}">
-                    <button>Add to archive</button>
+                    <button id="add-to-archive">Add to archive</button>
                     </form>
                 </c:if>
                 <hr>
@@ -37,5 +38,6 @@
 
 </div>
 <%@include file="Footer.jsp"%>
+
 </body>
 </html>
