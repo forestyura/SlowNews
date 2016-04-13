@@ -11,14 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet({"/news",""})
+@WebServlet({"/view/news"})
 public class NewsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (req.getRequestURI().contains("news") || req.getRequestURI().equals("/")) {
             req.setAttribute("News", new NewsProvider().readNews().getNewsList());
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/News.jsp");
             dispatcher.forward(req, resp);
             resp.setContentLengthLong(10000);
+        }
 
     }
 
@@ -29,7 +31,6 @@ public class NewsServlet extends HttpServlet {
                         req.getSession().getAttribute("LoginUsers").toString(),
                         new News(req.getParameter("title"), req.getParameter("description"), req.getParameter("pubDate")));
             }
-        resp.sendRedirect("/");
     }
 
 }

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/login")
+@WebServlet("/view/login")
 public class LogInServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,7 +28,7 @@ public class LogInServlet extends HttpServlet {
                     req.getSession().setAttribute("LoginUsers", user.getUsername());
                 }
             }
-            resp.sendRedirect("/login");
+            resp.sendRedirect("/view/login");
         }
 
     }

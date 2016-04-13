@@ -2,4 +2,3 @@
 <div class="footer">
     SlowNews 2016
 </div>
-<audio autoplay="autoplay" hidden="hidden" src="music.mp3"></audio>
