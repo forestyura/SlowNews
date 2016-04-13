@@ -55,26 +55,14 @@ $(function(){
     });
     
     $(document).on("click", "button#login-button", function (event) {
-        var formData = {
-            'username': $('input[name=username]').val(),
-            'password': $('input[name=password]').val()
-        };
-
-        $.post("/view/login", formData, function(data) {
+        $.post("/view/login", $(event.target.form).serialize(), function(data) {
             document.getElementById("page-content").innerHTML = data;
         });
         event.preventDefault();
     })
 
     $(document).on("click", "button#registration-button", function (event) {
-        var formData = {
-            'username': $('input[name=username]').val(),
-            'e-mail': $('input[name=e-mail]').val(),
-            'password': $('input[name=password]').val(),
-            'confirm-password': $('input[name=confirm-password]').val()
-        };
-
-        $.post("/view/registration", formData, function(data) {
+        $.post("/view/registration",$(event.target.form).serialize(), function(data) {
             document.getElementById("page-content").innerHTML = data;
         });
         event.preventDefault();
@@ -88,7 +76,6 @@ $(function(){
     })
 
     $(document).on("click", "button#add-to-archive", function (event) {
-
         $.post("/view/news", $(event.target.form).serialize(), function(data) {
         });
         event.preventDefault();
