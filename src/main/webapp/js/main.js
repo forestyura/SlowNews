@@ -88,14 +88,8 @@ $(function(){
     })
 
     $(document).on("click", "button#add-to-archive", function (event) {
-        var formData = {
-            'title': $('input[name=title]').val(),
-            'description': $('input[name=description]').val(),
-            'image': $('input[name=image]').val(),
-            'pubDate': $('input[name=pubDate]').val()
-        };
 
-        $.post("/view/news", formData, function(data) {
+        $.post("/view/news", $(event.target.form).serialize(), function(data) {
         });
         event.preventDefault();
     })

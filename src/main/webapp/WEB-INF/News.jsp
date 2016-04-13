@@ -14,7 +14,7 @@
                     ${news.pubDate}
                 </div>
                 <c:if test="${LoginUsers!=null}">
-                    <form name="news" method="post">
+                    <form id="news-form" name="news" method="post">
                         <input type="hidden" id="title" name="title" value="${news.title}">
                         <input type="hidden" name="description" value="${news.description}">
                         <input type="hidden" name="image" value="${news.image}">
