@@ -1,4 +1,6 @@
-package com.forest.slownews.controller;
+package com.forest.slownews.controller.Filter;
+
+import com.forest.slownews.service.WeatherProvider;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

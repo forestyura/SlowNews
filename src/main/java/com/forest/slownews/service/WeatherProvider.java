@@ -1,4 +1,4 @@
-package com.forest.slownews.controller;
+package com.forest.slownews.service;
 
 import org.json.JSONObject;
 

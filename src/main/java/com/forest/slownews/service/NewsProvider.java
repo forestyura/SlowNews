@@ -1,4 +1,4 @@
-package com.forest.slownews.controller;
+package com.forest.slownews.service;
 
 import com.forest.slownews.model.NewsList;
 
@@ -11,7 +11,7 @@ public class NewsProvider {
 
     public NewsList readNews() {
         try {
-            return (NewsList) JAXBContext.newInstance(NewsList.class).createUnmarshaller().unmarshal(new URL("http://feeds.bbci.co.uk/news/rss.xml"));
+            return (NewsList) JAXBContext.newInstance(NewsList.class).createUnmarshaller().unmarshal(new URL("http://gazeta.ua/ru/rss"));
         }
         catch (MalformedURLException ex) {
             System.out.println(ex);

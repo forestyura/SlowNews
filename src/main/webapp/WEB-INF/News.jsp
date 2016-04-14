@@ -16,9 +16,6 @@
                 <c:if test="${LoginUsers!=null}">
                     <form id="news-form" name="news" method="post">
                         <input type="hidden" id="title" name="title" value="${news.title}">
-                        <input type="hidden" name="description" value="${news.description}">
-                        <input type="hidden" name="image" value="${news.image}">
-                        <input type="hidden" name="pubDate" value="${news.pubDate}">
                     <button id="add-to-archive">Add to archive</button>
                     </form>
                 </c:if>

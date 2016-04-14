@@ -1,5 +1,7 @@
 package com.forest.slownews.controller;
 
+import com.forest.slownews.service.WeatherProvider;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

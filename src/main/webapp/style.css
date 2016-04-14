@@ -209,6 +209,8 @@ a:link{
 .news-date{
     float: left;
     display: block;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 
