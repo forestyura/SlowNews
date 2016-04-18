@@ -17,6 +17,6 @@
 
 </div>
 <%@include file="Footer.jsp"%>
-<audio autoplay="autoplay" hidden="hidden" src="music.mp3"></audio>
+
 </body>
 </html>
