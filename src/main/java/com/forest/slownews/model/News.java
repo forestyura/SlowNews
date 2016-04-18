@@ -16,7 +16,7 @@ public class News {
 
     public News() { }
 
-    public News (String title, String description, String pubDate, String image) {
+    public News (String title, String description, String image, String pubDate) {
         this.title = title;
         this.description = description;
         this.pubDate = pubDate;

@@ -11,7 +11,7 @@ public class UserDao {
     public ArrayList<User> getUserList () {
         ArrayList<User> userList = new ArrayList<>();
         try {
-            ResultSet rs = new DBProvider().getQuery("Select * from \"User\"");
+            ResultSet rs = new DBProvider().getQuery("SELECT * FROM \"User\"");
             while (rs.next()) {
                userList.add(new User(rs.getString(2), rs.getString(3), rs.getString(4)));
             }

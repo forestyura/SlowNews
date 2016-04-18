@@ -1,7 +1,7 @@
 package com.forest.slownews.controller;
 
+import com.forest.slownews.model.ArchiveDao;
 import com.forest.slownews.model.News;
-import com.forest.slownews.model.ArchiveNewsList;
 import com.forest.slownews.model.NewsList;
 import com.forest.slownews.service.NewsProvider;
 
@@ -32,7 +32,7 @@ public class NewsServlet extends HttpServlet {
         List<News> listNews = (List<News>) req.getSession(true).getAttribute("News");
         NewsList newsList = new NewsList(listNews);
         if(req.getSession().getAttribute("LoginUsers")!=null) {
-                ArchiveNewsList.getInstance().addArchiveNews(
+                new ArchiveDao().addArchiveNews(
                         req.getSession().getAttribute("LoginUsers").toString(),
                        newsList.getNewsByTile(req.getParameter("title")));
             }

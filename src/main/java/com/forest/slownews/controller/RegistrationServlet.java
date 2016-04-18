@@ -2,7 +2,6 @@ package com.forest.slownews.controller;
 
 import com.forest.slownews.model.User;
 import com.forest.slownews.model.UserDao;
-import com.forest.slownews.model.UsersList;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.servlet.RequestDispatcher;

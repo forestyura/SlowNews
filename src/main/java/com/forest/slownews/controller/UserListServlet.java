@@ -1,6 +1,6 @@
 package com.forest.slownews.controller;
 
-import com.forest.slownews.model.UsersList;
+import com.forest.slownews.model.UserDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,7 +14,7 @@ import java.io.IOException;
 public class UserListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("Users", UsersList.getInstance().getUserList());
+        req.setAttribute("Users", new UserDao().getUserList());
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/UserList.jsp");
         dispatcher.forward(req,resp);
     }
