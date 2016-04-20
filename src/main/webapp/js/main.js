@@ -12,6 +12,9 @@ $(function(){
         case '/registration' :
             goToLink("Registration");
             break;
+        case '/userlist' :
+            goToLink("UserList");
+            break;
         default:
             goToLink("News");
             break;
