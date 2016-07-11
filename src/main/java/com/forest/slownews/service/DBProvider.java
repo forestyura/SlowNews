@@ -14,7 +14,7 @@ public class DBProvider {
         catch (ClassNotFoundException ex) {
             System.out.println(ex);
         }
-        Connection connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/slownews", "postgres", "password");
+        Connection connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/slownews", "postgres", "1111");
         Statement statement = connection.createStatement();
         return statement;
     }
